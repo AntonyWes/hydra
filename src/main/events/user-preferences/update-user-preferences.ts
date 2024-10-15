@@ -8,14 +8,25 @@ const updateUserPreferences = async (
   _event: Electron.IpcMainInvokeEvent,
   preferences: Partial<UserPreferences>
 ) => {
+  console.log("Received preferences:", preferences);
+
   if (preferences.language) {
     i18next.changeLanguage(preferences.language);
   }
 
+  const updatedPreferences = { ...preferences };
+
+  if (!updatedPreferences.primaryGPU) {
+    const gpuInfo = (window as any).electron.getGPU();
+    updatedPreferences.primaryGPU = !gpuInfo.error ? gpuInfo.name : null;
+  }
+
+  console.log("Updated preferences:", updatedPreferences);
+
   return userPreferencesRepository.upsert(
     {
       id: 1,
-      ...preferences,
+      ...updatedPreferences,
     },
     ["id"]
   );

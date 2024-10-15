@@ -106,6 +106,7 @@ declare global {
 
     /* Hardware */
     getDiskFreeSpace: (path: string) => Promise<DiskSpace>;
+    getGPU: () => Promise<string>;
 
     /* Misc */
     openExternal: (src: string) => Promise<void>;

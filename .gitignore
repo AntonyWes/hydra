@@ -10,3 +10,9 @@ out
 .env
 .vite
 sentry.properties
+.venv
+.github
+.idea
+
+# Sentry Config File
+.env.sentry-build-plugin

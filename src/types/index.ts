@@ -116,6 +116,7 @@ export interface UserPreferences {
   realDebridApiToken: string | null;
   preferQuitInsteadOfHiding: boolean;
   runAtStartup: boolean;
+  primaryGPU: string | null;
 }
 
 export interface HowLongToBeatCategory {

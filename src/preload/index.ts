@@ -110,6 +110,8 @@ contextBridge.exposeInMainWorld("electron", {
   getDiskFreeSpace: (path: string) =>
     ipcRenderer.invoke("getDiskFreeSpace", path),
 
+  getAllGPUs: () => ipcRenderer.invoke("getAllGPUs"),
+
   /* Misc */
   ping: () => ipcRenderer.invoke("ping"),
   getVersion: () => ipcRenderer.invoke("getVersion"),

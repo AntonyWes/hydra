@@ -158,3 +158,5 @@ export function SettingsGeneral() {
     </>
   );
 }
+
+//<h5>{t("primarygpu", { gpu: userPreferences.primaryGPU })}</h5>TODO:uncoment
