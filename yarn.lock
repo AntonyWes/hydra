@@ -3628,6 +3628,13 @@ dequal@^2.0.3:
   resolved "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
   integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
 
+detect-gpu@^5.0.52:
+  version "5.0.52"
+  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-5.0.52.tgz#3c0c32efef651a107a7c3cb0a523dfa90c0d83eb"
+  integrity sha512-c0nacPlL1FByfS5RotXmgGBzpyISkBxy3UZz+nwpfxjVR75ru8glQ6ndEVGSNm3kTF2+iJK3ou1c6w+dKUCS3w==
+  dependencies:
+    webgl-constants "^1.1.1"
+
 detect-libc@^2.0.0:
   version "2.0.3"
   resolved "https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz"
@@ -7197,6 +7204,11 @@ synckit@^0.8.6:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
+systeminformation@^5.23.5:
+  version "5.23.5"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.23.5.tgz#bf7544be42c42f7d14a81b02aa0365e9ca1f5266"
+  integrity sha512-PEpJwhRYxZgBCAlWZhWIgfMTjXLqfcaZ1pJsJn9snWNfBW/Z1YQg1mbIUSWrEV3ErAHF7l/OoVLQeaZDlPzkpA==
+
 tar-fs@^2.0.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz"
@@ -7664,6 +7676,11 @@ web-streams-polyfill@^3.0.3:
   version "3.3.3"
   resolved "https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz"
   integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
+
+webgl-constants@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/webgl-constants/-/webgl-constants-1.1.1.tgz#f9633ee87fea56647a60b9ce735cbdfb891c6855"
+  integrity sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

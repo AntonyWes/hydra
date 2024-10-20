@@ -1,4 +1,8 @@
-import { DownloadManager, PythonInstance, startMainLoop } from "./services";
+import {
+  DownloadManager,
+  PythonInstance,
+  startMainLoop,
+} from "./services";
 import {
   downloadQueueRepository,
   userPreferencesRepository,
@@ -10,7 +14,6 @@ import { uploadGamesBatch } from "./services/library-sync";
 
 const loadState = async (userPreferences: UserPreferences | null) => {
   import("./events");
-
   if (userPreferences?.realDebridApiToken) {
     RealDebridClient.authorize(userPreferences?.realDebridApiToken);
   }

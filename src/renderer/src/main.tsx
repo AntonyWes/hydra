@@ -32,9 +32,7 @@ import resources from "@locales";
 import "./workers";
 import { RepacksContextProvider } from "./context";
 
-Sentry.init({
-  dsn: "https://555e37ffd23b3a00ae9297b88c05d845@o4508094807015424.ingest.de.sentry.io/4508094864752720",
-});
+Sentry.init();
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)

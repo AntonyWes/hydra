@@ -32,7 +32,7 @@ export class UserPreferences {
   @Column("boolean", { default: false })
   runAtStartup: boolean;
 
-  @Column("text", { nullable: true })
+  @Column("text", { default: "cant find" })
   primaryGPU: string | null;
 
   @CreateDateColumn()

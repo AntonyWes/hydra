@@ -14,19 +14,12 @@ const updateUserPreferences = async (
     i18next.changeLanguage(preferences.language);
   }
 
-  const updatedPreferences = { ...preferences };
-
-  if (!updatedPreferences.primaryGPU) {
-    const gpuInfo = (window as any).electron.getGPU();
-    updatedPreferences.primaryGPU = !gpuInfo.error ? gpuInfo.name : null;
-  }
-
-  console.log("Updated preferences:", updatedPreferences);
+  console.log("Updated preferences:", preferences);
 
   return userPreferencesRepository.upsert(
     {
       id: 1,
-      ...updatedPreferences,
+      ...preferences,
     },
     ["id"]
   );

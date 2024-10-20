@@ -110,6 +110,7 @@ export const Hydra2_0_3: HydraMigration = {
           table.boolean("runAtStartup").notNullable().defaultTo(0);
           table.datetime("createdAt").notNullable().defaultTo(knex.fn.now());
           table.datetime("updatedAt").notNullable().defaultTo(knex.fn.now());
+          table.text("primaryGPU").notNullable().defaultTo("cant find");
         });
       }
     });

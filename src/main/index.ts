@@ -12,6 +12,7 @@ import resources from "@locales";
 import { userPreferencesRepository } from "@main/repository";
 import { knexClient, migrationConfig } from "./knex-client";
 import { databaseDirectory } from "./constants";
+const si = require("systeminformation");
 
 const { autoUpdater } = updater;
 
@@ -100,6 +101,18 @@ app.whenReady().then(async () => {
   if (userPreferences?.language) {
     i18n.changeLanguage(userPreferences.language);
   }
+
+  si.graphics()
+    .then((data) => {
+      const gpuName =
+        data.controllers.length > 0
+          ? data.controllers[0].model.split("[")[1].slice(0, -1)
+          : "No GPU found";
+      userPreferencesRepository.update({ id: 1 }, { primaryGPU: gpuName });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 
   WindowManager.createMainWindow();
   WindowManager.createSystemTray(userPreferences?.language || "en");
