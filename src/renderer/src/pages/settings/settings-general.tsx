@@ -108,7 +108,6 @@ export function SettingsGeneral() {
     }
   }
 
-  // @ts-ignore
   return (
     <>
       <TextField
@@ -156,6 +155,7 @@ export function SettingsGeneral() {
           })
         }
       />
+      {/* @ts-ignore: userPreferences is never null in renderer section */}
       <h5>{t("primarygpu", { gpu: userPreferences.primaryGPU })}</h5>
     </>
   );

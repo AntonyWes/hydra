@@ -1,8 +1,4 @@
-import {
-  DownloadManager,
-  PythonInstance,
-  startMainLoop,
-} from "./services";
+import { DownloadManager, PythonInstance, startMainLoop } from "./services";
 import {
   downloadQueueRepository,
   userPreferencesRepository,
