@@ -1,0 +1,13 @@
+.vscode/
+node_modules/
+hydra-download-manager/
+fastlist.exe
+__pycache__
+dist
+out
+.DS_Store
+*.log*
+.env
+.vite
+sentry.properties
+ludusavi/
